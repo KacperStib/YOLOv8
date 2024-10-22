@@ -1,0 +1,6 @@
+train: /home/kacper/yolov8/train/images
+val: /home/kacper/yolov8/valid/images
+
+names:
+  0: mysz
+
