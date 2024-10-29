@@ -14,7 +14,8 @@ def preprocess_image(img):
     img = np.expand_dims(img, axis=0)  # Add a batch dimension
     return torch.tensor(img)
 
-file = "runs/detect/yolov8n_custom6/weights/best.pt"
+#file = "runs/detect/yolov8n_custom6/weights/best.pt"
+file = "bottles.pt"
 model = YOLO(file)
 
 colorizer = rs.colorizer()
