@@ -17,11 +17,13 @@ def preprocess_image(img):
 file = "runs/detect/yolov8n_custom6/weights/best.pt"
 model = YOLO(file)
 
+colorizer = rs.colorizer()
+
 # init realsense
 pipeline = rs.pipeline()
 camera_aconfig = rs.config()
-camera_aconfig.enable_stream(rs.stream.depth, 640, 640, rs.format.z16, 30)
-camera_aconfig.enable_stream(rs.stream.color, 640, 640, rs.format.bgr8, 30)
+camera_aconfig.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
+camera_aconfig.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
 pipeline.start(camera_aconfig)
 # init realsense
 
@@ -36,7 +38,9 @@ while True:
     depth_image = np.asanyarray(depth_frame.get_data())
     color_image = np.asanyarray(color_frame.get_data())
     # get realsense frames
-
+    
+    depth_color_frame = colorizer.colorize(depth_frame)
+    depth_color_image = np.asanyarray(depth_color_frame.get_data())
     #depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(depth_image, alpha=0.03), cv2.COLORMAP_JET)
 	#filled_depth_colormap = cv2.applyColorMap(cv2.convertScaleAbs(filled_depth_image, alpha=0.03), cv2.COLORMAP_JET)
 	# color_seg = color_image.copy()
@@ -60,18 +64,18 @@ while True:
         #depth
         dx = int((x1 + x2) // 2) #// dzielenie calkowite
         dy = int((y1 + y2) // 2)
-        depth = depth_frame.get_distance(dy, dx)
+        depth = depth_frame.get_distance(dx, dy)
 
         label = f'{label} {depth:.2f}'
-        cv2.rectangle(depth_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        cv2.putText(depth_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+        print(depth)
+        cv2.rectangle(depth_color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+        cv2.putText(depth_color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         #depth
 
-    cv2.imshow('Realsense-color', color_imgage)
-    cv2.imshow("Realsense-depth", depth_image)
+    cv2.imshow('Realsense-color', color_image)
+    cv2.imshow("Realsense-depth", depth_color_image)
     if cv2.waitKey(1) == ord('q'):
         break
-
 
 pipeline.stop()
 cv2.destroyAllWindows()
