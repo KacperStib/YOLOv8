@@ -13,17 +13,17 @@ RUN apt-get update \
     cmake \
     git-all \
     software-properties-common \
+    python3-pip \
  && rm -rf /var/lib/apt/lists/*
+
 
 RUN apt-get update \
  && apt-get install -y \
     ros-${ROS_DISTRO}-librealsense2* \
     ros-${ROS_DISTRO}-realsense2-* \
- && rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update \
- && apt-get install -y \
     ros-${ROS_DISTRO}-rviz2 \
  && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install pyrealsense2 numpy opencv-python ultralytics
 
 ARG DEBIAN_FRONTEND=dialog
