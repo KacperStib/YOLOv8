@@ -1,11 +1,45 @@
 {
-  "name": "Docker for Intel Realsense with ROS 2",
-  "dockerComposeFile": [
-    "../docker/docker-compose-gui.yml" // Alternatives: "../docker/docker-compose-gui.yml", "../docker/docker-compose-gui-nvidia.yml"
+  "name": "ROS 2 Workspace humble-ros-base",
+  "workspaceFolder": "/home/rosdev/ros2_ws",
+  "dockerFile": "../docker/Dockerfile",
+  "runArgs": [
+    "--device=/dev/ttyUSB0",
+    "--network=host",
+    "--privileged",
+    "--security-opt=seccomp:unconfined",
+    "--security-opt=apparmor:unconfined",
+    "--volume=/dev:/dev",
+    "--volume=/tmp/.X11-unix:/tmp/.X11-unix",
+    "--volume=.:/home/rosdev/ros2_ws"
   ],
-  "service": "realsense_ros2",
-  "workspaceFolder": "/ros2_ws",
-  "shutdownAction": "stopCompose",
-  "extensions": [
-  ]
+  "remoteUser": "rosdev",
+  "containerEnv": {
+    "DISPLAY": "${localEnv:DISPLAY}"
+  },
+  // "postCreateCommand": "sudo usermod -aG dialout rosdev",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "charliermarsh.ruff",
+        "ms-vscode.cpptools-extension-pack",
+        "ms-iot.vscode-ros",
+        "smilerobotics.urdf",
+        "redhat.vscode-xml",
+        "tamasfe.even-better-toml",
+        "timonwong.shellcheck",
+        "yzhang.markdown-all-in-one"
+      ],
+      "settings": {
+        "files.associations": {
+          "*.rviz": "yaml",
+          "*.srdf": "xml",
+          "*.urdf": "xml",
+          "*.xacro": "xml"
+        }
+      }
+    }
+  },
+  "workspaceMount": "source=${localWorkspaceFolder},target=/home/rosdev/ros2_ws/src,type=bind",
+  "mounts": []
 }

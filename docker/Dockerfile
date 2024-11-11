@@ -7,6 +7,9 @@ SHELL ["/bin/bash", "-c"]
 
 ARG DEBIAN_FRONTEND=noninteractive
 
+RUN useradd -m -s /bin/bash -u 1000 rosdev && \
+    echo "rosdev ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 RUN apt-get update \
  && apt-get install -y \
     build-essential \
