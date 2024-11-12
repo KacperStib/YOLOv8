@@ -14,7 +14,8 @@ def preprocess_image(img):
     img = np.expand_dims(img, axis=0)  # Add a batch dimension
     return torch.tensor(img)
 
-file = "runs/detect/yolov8n_custom6/weights/best.pt"
+#file = "runs/detect/yolov8n_custom6/weights/best.pt"
+file = 'b2.pt'
 model = YOLO(file)
 
 cap = cv2.VideoCapture(0)
@@ -28,7 +29,7 @@ while True:
     boxes = res[0].boxes.xyxy.cpu().numpy()  
     confidences = res[0].boxes.conf.cpu().numpy()  
     class_ids = res[0].boxes.cls.cpu().numpy()  
-
+    print(confidences)
     for i, box in enumerate(boxes):
         x1, y1, x2, y2 = map(int, box)
 

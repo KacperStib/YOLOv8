@@ -15,7 +15,7 @@ def preprocess_image(img):
     return torch.tensor(img)
 
 #file = "runs/detect/yolov8n_custom6/weights/best.pt"
-file = "bottles.pt"
+file = "b1.pt"
 model = YOLO(file)
 
 colorizer = rs.colorizer()
@@ -25,30 +25,34 @@ pipeline = rs.pipeline()
 camera_aconfig = rs.config()
 camera_aconfig.enable_stream(rs.stream.depth, 640, 480, rs.format.z16, 30)
 camera_aconfig.enable_stream(rs.stream.color, 640, 480, rs.format.bgr8, 30)
-pipeline.start(camera_aconfig)
+profile = pipeline.start(camera_aconfig)
 # init realsense
+
+# read instrinctincs
+intr = profile.get_stream(rs.stream.color).as_video_stream_profile().get_intrinsics()
 
 while True:
 
     # get realsense frames
     frames = pipeline.wait_for_frames()
 
-    # depth_frame = frames.get_depth_frame()
-    # color_frame = frames.get_color_frame()
+    # not aligned frames
+        # depth_frame = frames.get_depth_frame()
+        # color_frame = frames.get_color_frame()
 
-    # depth_image = np.asanyarray(depth_frame.get_data())
-    # color_image = np.asanyarray(color_frame.get_data())
-    # # get realsense frames
-    
-    # depth_color_frame = colorizer.colorize(depth_frame)
-    # depth_color_image = np.asanyarray(depth_color_frame.get_data())
+        # depth_image = np.asanyarray(depth_frame.get_data())
+        # color_image = np.asanyarray(color_frame.get_data())
+        # # get realsense frames
+        
+        # depth_color_frame = colorizer.colorize(depth_frame)
+        # depth_color_image = np.asanyarray(depth_color_frame.get_data())
 
+    # get aligned frames
     align_to = rs.stream.color
     align = rs.align(align_to)
 
     aligned_frames = align.process(frames)
 
-    # Get aligned frames
     depth_frame = aligned_frames.get_depth_frame()
     color_frame = aligned_frames.get_color_frame()
 
@@ -58,6 +62,7 @@ while True:
     depth_color_frame = colorizer.colorize(depth_frame)
     depth_color_image = np.asanyarray(depth_color_frame.get_data())
 
+    # yolo detection from frame
     img_analyze = preprocess_image(color_image)
     res = model(img_analyze)
     boxes = res[0].boxes.xyxy.cpu().numpy()  
@@ -72,24 +77,22 @@ while True:
         cv2.rectangle(color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         
-        #depth
-        # x1 = x1 + 50
-        # x2 = x2 + 50
-
-        dx = int((x1 + x2) // 2) #// dzielenie calkowite
+        dx = int((x1 + x2) // 2) # // - dzielenie calkowite
         dy = int((y1 + y2) // 2)
 
-        # depth_image_scaled = cv2.convertScaleAbs(depth_image, alpha=0.025) 
-
+        # depth
         if dx < 640 and dx > 0 and dy < 480 and dy > 0:
             depth = depth_frame.get_distance(dx, dy)
 
+        # point coordinates
+        point_3d = rs.rs2_deproject_pixel_to_point(intr, [dx, dy], depth)
+        print (f"X: {point_3d[0]:.3f} m, Y: {point_3d[1]:.3f} m, Z: {point_3d[2]:.3f} m")
+
         label = f'{label} {depth:.2f}'
-        print(depth)
 
         cv2.rectangle(depth_color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(depth_color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-        #depth
+        # depth
 
     cv2.imshow('Realsense-color', color_image)
     cv2.imshow("Realsense-depth", depth_color_image)
