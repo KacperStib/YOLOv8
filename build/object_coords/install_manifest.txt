@@ -1,0 +1,16 @@
+/home/rosdev/ros2_ws/install/object_coords/lib/object_coords/object_coords
+/home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/package_run_dependencies/object_coords
+/home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/parent_prefix_path/object_coords
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.sh
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.dsv
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.sh
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.dsv
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.bash
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.sh
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.zsh
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.dsv
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.dsv
+/home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/packages/object_coords
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig.cmake
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig-version.cmake
+/home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.xml

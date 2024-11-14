@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target object_coords[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o[0m
+[100%] [32m[1mLinking CXX executable object_coords[0m
+[100%] Built target object_coords
+-- Install configuration: ""
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/lib/object_coords/object_coords
+-- Set runtime path of "/home/rosdev/ros2_ws/install/object_coords/lib/object_coords/object_coords" to ""
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/package_run_dependencies/object_coords
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/parent_prefix_path/object_coords
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.sh
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.sh
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.dsv
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.bash
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.sh
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.zsh
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.dsv
+-- Installing: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.dsv
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/packages/object_coords
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig.cmake
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig-version.cmake
+-- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.xml

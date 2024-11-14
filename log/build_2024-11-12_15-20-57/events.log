@@ -1,0 +1,93 @@
+[0.000000] (-) TimerEvent: {}
+[0.000491] (object_coords) JobQueued: {'identifier': 'object_coords', 'dependencies': OrderedDict()}
+[0.000527] (object_coords) JobStarted: {'identifier': 'object_coords'}
+[0.010781] (object_coords) JobProgress: {'identifier': 'object_coords', 'progress': 'cmake'}
+[0.012269] (object_coords) JobProgress: {'identifier': 'object_coords', 'progress': 'build'}
+[0.012448] (object_coords) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/rosdev/ros2_ws/build/object_coords', '--', '-j20', '-l20'], 'cwd': '/home/rosdev/ros2_ws/build/object_coords', 'env': OrderedDict([('HOSTNAME', 'jakub-Zenbook-UX3402VA-UX3402VA'), ('GIT_ASKPASS', '/vscode/vscode-server/bin/linux-x64/65edc4939843c90c34d61f4ce11704f09d3e5cb6/extensions/git/dist/askpass.sh'), ('SHLVL', '2'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('BROWSER', '/vscode/vscode-server/bin/linux-x64/65edc4939843c90c34d61f4ce11704f09d3e5cb6/bin/helpers/browser.sh'), ('HOME', '/home/rosdev'), ('TERM_PROGRAM_VERSION', '1.95.1'), ('VSCODE_IPC_HOOK_CLI', '/tmp/vscode-ipc-ed859da4-62d7-4e54-a41a-d56f0ba5f34c.sock'), ('WS_DIR', '/ros2_ws'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/vscode/vscode-server/bin/linux-x64/65edc4939843c90c34d61f4ce11704f09d3e5cb6/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/vscode/vscode-server/bin/linux-x64/65edc4939843c90c34d61f4ce11704f09d3e5cb6/node'), ('COLORTERM', 'truecolor'), ('REMOTE_CONTAINERS', 'true'), ('WAYLAND_DISPLAY', 'vscode-wayland-8958682a-d291-4869-9362-a0db0082c4d4.sock'), ('COLCON_PREFIX_PATH', '/home/rosdev/ros2_ws/install'), ('ROS_DISTRO', 'humble'), ('REMOTE_CONTAINERS_IPC', '/tmp/vscode-remote-containers-ipc-51508bdd-b1b8-472d-8ac6-fc55e5ae975c.sock'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/vscode/vscode-server/bin/linux-x64/65edc4939843c90c34d61f4ce11704f09d3e5cb6/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('XDG_RUNTIME_DIR', '/tmp/user/1000'), ('REMOTE_CONTAINERS_SOCKETS', '["/tmp/vscode-ssh-auth-51508bdd-b1b8-472d-8ac6-fc55e5ae975c.sock","/home/rosdev/.gnupg/S.gpg-agent"]'), ('DISPLAY', ':0'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/tmp/user/1000/vscode-git-3e4d7a6005.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AUTH_SOCK', '/tmp/vscode-ssh-auth-51508bdd-b1b8-472d-8ac6-fc55e5ae975c.sock'), ('AMENT_PREFIX_PATH', '/home/rosdev/ros2_ws/install/object_coords:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/rosdev/ros2_ws/build/object_coords'), ('LC_ALL', 'C.UTF-8'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/rosdev/ros2_ws/install/object_coords:/opt/ros/humble')]), 'shell': False}
+[0.049639] (object_coords) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099576] (-) TimerEvent: {}
+[0.199996] (-) TimerEvent: {}
+[0.217400] (object_coords) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.300267] (-) TimerEvent: {}
+[0.304134] (object_coords) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.313197] (object_coords) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.329758] (object_coords) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.354548] (object_coords) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.384131] (object_coords) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.400344] (-) TimerEvent: {}
+[0.466226] (object_coords) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.471861] (object_coords) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.500480] (-) TimerEvent: {}
+[0.601060] (-) TimerEvent: {}
+[0.701814] (-) TimerEvent: {}
+[0.704228] (object_coords) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.751072] (object_coords) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.802031] (-) TimerEvent: {}
+[0.803838] (object_coords) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.820106] (object_coords) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.902174] (-) TimerEvent: {}
+[0.929308] (object_coords) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.929923] (object_coords) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.002408] (-) TimerEvent: {}
+[1.035698] (object_coords) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.037413] (object_coords) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.102543] (-) TimerEvent: {}
+[1.203054] (-) TimerEvent: {}
+[1.223237] (object_coords) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.236963] (object_coords) StdoutLine: {'line': b'-- Generating done\n'}
+[1.239009] (object_coords) StdoutLine: {'line': b'-- Build files have been written to: /home/rosdev/ros2_ws/build/object_coords\n'}
+[1.289391] (object_coords) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o\x1b[0m\n'}
+[1.303144] (-) TimerEvent: {}
+[1.403603] (-) TimerEvent: {}
+[1.504206] (-) TimerEvent: {}
+[1.605018] (-) TimerEvent: {}
+[1.705622] (-) TimerEvent: {}
+[1.806176] (-) TimerEvent: {}
+[1.906722] (-) TimerEvent: {}
+[2.007147] (-) TimerEvent: {}
+[2.107669] (-) TimerEvent: {}
+[2.208199] (-) TimerEvent: {}
+[2.308736] (-) TimerEvent: {}
+[2.409283] (-) TimerEvent: {}
+[2.509836] (-) TimerEvent: {}
+[2.610378] (-) TimerEvent: {}
+[2.710847] (-) TimerEvent: {}
+[2.811451] (-) TimerEvent: {}
+[2.912014] (-) TimerEvent: {}
+[3.012467] (-) TimerEvent: {}
+[3.112988] (-) TimerEvent: {}
+[3.213480] (-) TimerEvent: {}
+[3.313997] (-) TimerEvent: {}
+[3.414549] (-) TimerEvent: {}
+[3.515087] (-) TimerEvent: {}
+[3.615581] (-) TimerEvent: {}
+[3.716012] (-) TimerEvent: {}
+[3.816596] (-) TimerEvent: {}
+[3.917041] (-) TimerEvent: {}
+[4.017512] (-) TimerEvent: {}
+[4.118023] (-) TimerEvent: {}
+[4.218450] (-) TimerEvent: {}
+[4.311981] (object_coords) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KCoordsPublisher::CoordsPublisher()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.312224] (object_coords) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:13:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kclass \xe2\x80\x98\x1b[01m\x1b[KCoordsPublisher\x1b[m\x1b[K\xe2\x80\x99 does not have any field named \xe2\x80\x98\x1b[01m\x1b[Kcount\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.312299] (object_coords) StderrLine: {'line': b'   13 |         CoordsPublisher() : Node("object_coords"), \x1b[01;31m\x1b[Kcount\x1b[m\x1b[K(0) {\n'}
+[4.312356] (object_coords) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.316590] (object_coords) StderrLine: {'line': b'\x1b[01m\x1b[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:16:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KMinimalPublisher\x1b[m\x1b[K\xe2\x80\x99 has not been declared\n'}
+[4.316766] (object_coords) StderrLine: {'line': b'   16 |             500ms, std::bind(&\x1b[01;31m\x1b[KMinimalPublisher\x1b[m\x1b[K::timer_callback, this));\n'}
+[4.316843] (object_coords) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.318575] (-) TimerEvent: {}
+[4.419001] (-) TimerEvent: {}
+[4.519439] (-) TimerEvent: {}
+[4.619874] (-) TimerEvent: {}
+[4.720289] (-) TimerEvent: {}
+[4.820719] (-) TimerEvent: {}
+[4.921148] (-) TimerEvent: {}
+[5.021576] (-) TimerEvent: {}
+[5.122007] (-) TimerEvent: {}
+[5.222485] (-) TimerEvent: {}
+[5.296828] (object_coords) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/object_coords.dir/build.make:76: CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o] Error 1\n'}
+[5.297285] (object_coords) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/object_coords.dir/all] Error 2\n'}
+[5.297418] (object_coords) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.301238] (object_coords) CommandEnded: {'returncode': 2}
+[5.322602] (-) TimerEvent: {}
+[5.356227] (object_coords) JobEnded: {'identifier': 'object_coords', 'rc': 2}
+[5.367338] (-) EventReactorShutdown: {}

@@ -1,0 +1,10 @@
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/uninstall.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/object_coords_uninstall.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/object_coords.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/test.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/edit_cache.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/rebuild_cache.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/list_install_components.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/install.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/install/local.dir
+/home/rosdev/ros2_ws/build/object_coords/CMakeFiles/install/strip.dir

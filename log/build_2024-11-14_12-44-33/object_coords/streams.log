@@ -1,0 +1,23 @@
+[0.007s] Invoking command in '/home/rosdev/ros2_ws/build/object_coords': /usr/bin/cmake --build /home/rosdev/ros2_ws/build/object_coords -- -j20 -l20
+[0.104s] [35m[1mConsolidate compiler generated dependencies of target object_coords[0m
+[0.135s] [100%] Built target object_coords
+[0.149s] Invoked command in '/home/rosdev/ros2_ws/build/object_coords' returned '0': /usr/bin/cmake --build /home/rosdev/ros2_ws/build/object_coords -- -j20 -l20
+[0.197s] Invoking command in '/home/rosdev/ros2_ws/build/object_coords': /usr/bin/cmake --install /home/rosdev/ros2_ws/build/object_coords
+[0.206s] -- Install configuration: ""
+[0.207s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/lib/object_coords/object_coords
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/package_run_dependencies/object_coords
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/parent_prefix_path/object_coords
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.sh
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.dsv
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.sh
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.dsv
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.bash
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.sh
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.zsh
+[0.208s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.dsv
+[0.209s] -- Installing: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.dsv
+[0.209s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/packages/object_coords
+[0.209s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig.cmake
+[0.209s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig-version.cmake
+[0.209s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.xml
+[0.211s] Invoked command in '/home/rosdev/ros2_ws/build/object_coords' returned '0': /usr/bin/cmake --install /home/rosdev/ros2_ws/build/object_coords

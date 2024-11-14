@@ -1,0 +1,20 @@
+[0.015s] Invoking command in '/home/rosdev/ros2_ws/build/object_coords': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rosdev/ros2_ws/build/object_coords -- -j20 -l20
+[0.071s] Invoked command in '/home/rosdev/ros2_ws/build/object_coords' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/rosdev/ros2_ws/build/object_coords -- -j20 -l20
+[0.111s] Invoking command in '/home/rosdev/ros2_ws/build/object_coords': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rosdev/ros2_ws/build/object_coords
+[0.123s] -- Install configuration: ""
+[0.123s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/package_run_dependencies/object_coords
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/parent_prefix_path/object_coords
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.sh
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/ament_prefix_path.dsv
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.sh
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/environment/path.dsv
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.bash
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.sh
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.zsh
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/local_setup.dsv
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.dsv
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/ament_index/resource_index/packages/object_coords
+[0.124s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig.cmake
+[0.125s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/cmake/object_coordsConfig-version.cmake
+[0.125s] -- Up-to-date: /home/rosdev/ros2_ws/install/object_coords/share/object_coords/package.xml
+[0.128s] Invoked command in '/home/rosdev/ros2_ws/build/object_coords' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/rosdev/ros2_ws/build/object_coords

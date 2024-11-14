@@ -1,0 +1,31 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+-- Found FastRTPS: /opt/ros/humble/include  
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/rosdev/ros2_ws/build/object_coords
+[ 50%] [32mBuilding CXX object CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o[0m
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:[m[K In constructor ‘[01m[KCoordsPublisher::CoordsPublisher()[m[K’:
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:13:52:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KCoordsPublisher[m[K’ does not have any field named ‘[01m[Kcount[m[K’
+   13 |         CoordsPublisher() : Node("object_coords"), [01;31m[Kcount[m[K(0) {
+      |                                                    [01;31m[K^~~~~[m[K
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:16:31:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisher[m[K’ has not been declared
+   16 |             500ms, std::bind(&[01;31m[KMinimalPublisher[m[K::timer_callback, this));
+      |                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/object_coords.dir/build.make:76: CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/object_coords.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

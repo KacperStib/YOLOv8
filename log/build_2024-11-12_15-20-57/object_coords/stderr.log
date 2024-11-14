@@ -1,0 +1,10 @@
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:[m[K In constructor ‘[01m[KCoordsPublisher::CoordsPublisher()[m[K’:
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:13:52:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KCoordsPublisher[m[K’ does not have any field named ‘[01m[Kcount[m[K’
+   13 |         CoordsPublisher() : Node("object_coords"), [01;31m[Kcount[m[K(0) {
+      |                                                    [01;31m[K^~~~~[m[K
+[01m[K/home/rosdev/ros2_ws/object_coords/src/object_coords_publisher.cpp:16:31:[m[K [01;31m[Kerror: [m[K‘[01m[KMinimalPublisher[m[K’ has not been declared
+   16 |             500ms, std::bind(&[01;31m[KMinimalPublisher[m[K::timer_callback, this));
+      |                               [01;31m[K^~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/object_coords.dir/build.make:76: CMakeFiles/object_coords.dir/src/object_coords_publisher.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/object_coords.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

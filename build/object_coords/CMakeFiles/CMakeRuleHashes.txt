@@ -1,0 +1,2 @@
+# Hashes of file build rules.
+52b6f645965a75260a3f11405c728fdd CMakeFiles/object_coords_uninstall
