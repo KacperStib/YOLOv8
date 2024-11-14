@@ -1,0 +1,3 @@
+[console_scripts]
+yolo_object_detection = yolo_object_detection.yolo_object_detection:main
+

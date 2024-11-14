@@ -70,29 +70,32 @@ while True:
     class_ids = res[0].boxes.cls.cpu().numpy()  
 
     for i, box in enumerate(boxes):
-        x1, y1, x2, y2 = map(int, box)
-
-        label = f'{model.names[int(class_ids[i])]} {confidences[i]:.2f}'
-
-        cv2.rectangle(color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        cv2.putText(color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
         
-        dx = int((x1 + x2) // 2) # // - dzielenie calkowite
-        dy = int((y1 + y2) // 2)
+        if confidences[i] > 0.4:
 
-        # depth
-        if dx < 640 and dx > 0 and dy < 480 and dy > 0:
-            depth = depth_frame.get_distance(dx, dy)
+            x1, y1, x2, y2 = map(int, box)
 
-        # point coordinates
-        point_3d = rs.rs2_deproject_pixel_to_point(intr, [dx, dy], depth)
-        print (f"X: {point_3d[0]:.3f} m, Y: {point_3d[1]:.3f} m, Z: {point_3d[2]:.3f} m")
+            label = f'{model.names[int(class_ids[i])]} {confidences[i]:.2f}'
 
-        label = f'{label} {depth:.2f}'
+            cv2.rectangle(color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            
+            dx = int((x1 + x2) // 2) # // - dzielenie calkowite
+            dy = int((y1 + y2) // 2)
 
-        cv2.rectangle(depth_color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
-        cv2.putText(depth_color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-        # depth
+            # depth
+            if dx < 640 and dx > 0 and dy < 480 and dy > 0:
+                depth = depth_frame.get_distance(dx, dy)
+
+            # point coordinates
+            point_3d = rs.rs2_deproject_pixel_to_point(intr, [dx, dy], depth)
+            print (f"X: {point_3d[0]:.3f} m, Y: {point_3d[1]:.3f} m, Z: {point_3d[2]:.3f} m")
+
+            label = f'{label} {depth:.2f}'
+
+            cv2.rectangle(depth_color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
+            cv2.putText(depth_color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
+            # depth
 
     cv2.imshow('Realsense-color', color_image)
     cv2.imshow("Realsense-depth", depth_color_image)
