@@ -88,7 +88,7 @@ while True:
         point_3d = rs.rs2_deproject_pixel_to_point(intr, [dx, dy], depth)
         print (f"X: {point_3d[0]:.3f} m, Y: {point_3d[1]:.3f} m, Z: {point_3d[2]:.3f} m")
 
-        label = f'{label} {depth:.2f}'
+        label = f'{label} {depth:.2f} '
 
         cv2.rectangle(depth_color_image, (x1, y1), (x2, y2), (0, 255, 0), 2)
         cv2.putText(depth_color_image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)

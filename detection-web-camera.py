@@ -15,7 +15,7 @@ def preprocess_image(img):
     return torch.tensor(img)
 
 #file = "runs/detect/yolov8n_custom6/weights/best.pt"
-file = 'b2.pt'
+file = 'mys/mysz.pt'
 model = YOLO(file)
 
 cap = cv2.VideoCapture(0)
